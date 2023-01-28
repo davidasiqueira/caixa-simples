@@ -1,0 +1,20 @@
+.sidebar{
+  background-color: black;
+  display: grid;
+  align-content: space-between;
+  background-color: white;
+  overflow: hidden;
+  padding-inline-start: 5px;
+  padding-inline-end: 6px;
+  border-right: 1px solid #EFEFEF;
+  width: auto;
+  height: 100%;
+  max-width: 6rem;
+  flex-wrap: wrap;
+  row-gap: 50px;
+
+  svg {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
