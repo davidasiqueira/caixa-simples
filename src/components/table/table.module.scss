@@ -1,0 +1,33 @@
+.table {
+  width: 100%;
+  thead,tbody>tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    div {
+      display: grid;
+      grid-template-columns: 50px 50px;
+      column-gap: 12px;
+      td {
+        overflow: hidden;
+      }
+    }
+  }
+
+  thead{
+    color: #A0AEC0;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 14px 0;
+    
+  }
+  tbody {
+    font-weight: 700;
+    font-size: 14px;
+    overflow: scroll;
+    tr{
+      padding: 4px 0;
+      border-bottom: solid 2px #A0AEC0;
+    }
+  }  
+}

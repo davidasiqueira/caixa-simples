@@ -1,17 +1,39 @@
 import Button from "components/button";
 import styles from "./form.module.scss";
 import CurrencyInput from "react-currency-input-field";
+import Tds from "common/interfaces/lançamentos-interface";
+import { contains } from "cypress/types/jquery";
 
-function Form() {
+interface Props {
+  setLancamento: React.Dispatch<React.SetStateAction<Tds[]>>
+}
+
+function Form({setLancamento}: Props) {
+
+  function adicionarLancamento (evento: React.FormEvent<HTMLFormElement>) {
+    evento.preventDefault()
+    setLancamento(lancamentos => 
+      [
+        ...lancamentos,
+        {
+          tipo,
+          conta,
+          hora : Date.now()
+          quantia
+        }
+      ]
+      )
+  }
+
   return (
     <form id="lancamentoForm" className={styles.form}>
       <div className={styles.wrapper1}>
         <input
           className={styles.radioButton}
           type="radio"
-          name="operacao"
+          name="tipo"
           id="entrada"
-          value="entrada"
+          value="+"
           required
         />
         <label className={styles.radioLabel} htmlFor="entrada">
@@ -20,9 +42,9 @@ function Form() {
         <input
           className={styles.radioButton}
           type="radio"
-          name="operacao"
+          name="tipo"
           id="saida"
-          value="saida"
+          value="-"
           required
         />
         <label className={styles.radioLabel} htmlFor="saida">
