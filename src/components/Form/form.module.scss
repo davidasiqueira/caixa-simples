@@ -1,0 +1,81 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  div {
+    grid-column: 1 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+}
+
+.wrapper1{
+  row-gap: 34px ;
+  label:first-of-type{
+    background-color: #00A62E;
+  }
+  label:last-of-type{
+    background-color: #A60000;
+  }
+}
+
+.radioLabel {
+  background-color: #88bcd1;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0;
+  width: 150px;
+  border: 1px solid #EFEFEF;
+  display: flex;
+  justify-content: center;
+}
+
+.radioButton{
+  display: none;
+}
+.radioButton:checked+label{
+  background-color: #636363;
+  box-shadow: inset 0 0 10px black ;
+  border: 1px solid black;
+}
+.select {
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 14px;
+  padding: 12px 40px ;
+  width: 150px;
+  border: 1px solid #EFEFEF;
+  cursor: pointer;
+
+}
+.wrapper2{
+  row-gap: 30px;
+
+  button {
+    margin-top: 3px;
+  }
+}
+.inputWrapper {
+  row-gap: 8px;
+}
+.inputText {
+  align-self: flex-start;
+  border-radius: 8px;
+  background: #F7FAFC;
+  color: #718096;
+  border: none;
+  font-size: 14px;
+  padding: 6px 10px;
+}
+.inputTextLabel {
+  color: #718096;
+  font-weight: 400;
+  font-size: 14px;
+  align-self: flex-start;
+}

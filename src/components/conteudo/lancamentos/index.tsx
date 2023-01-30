@@ -1,11 +1,10 @@
-import Button from "components/button";
+import Form from "components/Form";
+import styles from "./lancamentos.module.scss"
 
 function Lancamentos() {
   return(
-    <div>
-      <Button type="submit">
-        Lançar!
-     </Button>
+    <div className={styles.wrapper}>
+     <Form/>
     </div>
   )
 }
