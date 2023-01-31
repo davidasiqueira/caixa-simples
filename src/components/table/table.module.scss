@@ -1,4 +1,5 @@
 .table {
+  
   width: 100%;
   thead,tbody>tr {
     display: grid;
@@ -22,6 +23,7 @@
     
   }
   tbody {
+    height: 100%;
     font-weight: 700;
     font-size: 14px;
     overflow: scroll;

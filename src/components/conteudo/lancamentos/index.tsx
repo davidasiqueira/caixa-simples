@@ -1,16 +1,16 @@
 import Form from "components/Form";
-import styles from "./lancamentos.module.scss"
-import Tds from "common/interfaces/lançamentos-interface";
+import styles from "./lancamentos.module.scss";
+import Lancamento from "common/interfaces/lançamentos-interface";
 
 interface Props {
-  setLancamento: React.Dispatch<React.SetStateAction<Tds[]>>
+  setLancamentos: React.Dispatch<React.SetStateAction<Lancamento[]>>;
 }
 
-function Lancamentos({setLancamento}: Props) {
-  return(
+function Lancamentos({ setLancamentos }: Props) {
+  return (
     <div className={styles.wrapper}>
-     <Form setLancamento={setLancamento}/>
+      <Form setLancamentos={setLancamentos} />
     </div>
-  )
+  );
 }
 export default Lancamentos;

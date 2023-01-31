@@ -1,32 +1,39 @@
 import Button from "components/button";
 import styles from "./form.module.scss";
 import CurrencyInput from "react-currency-input-field";
-import Tds from "common/interfaces/lançamentos-interface";
-import { contains } from "cypress/types/jquery";
+import Lancamento from "common/interfaces/lançamentos-interface";
+import { useState } from "react";
 
 interface Props {
-  setLancamento: React.Dispatch<React.SetStateAction<Tds[]>>
+  setLancamentos: React.Dispatch<React.SetStateAction<Lancamento[]>>;
 }
 
-function Form({setLancamento}: Props) {
+function Form({ setLancamentos }: Props) {
+  const [quantia, setQuantia] = useState('');
+  const [conta, setConta] = useState("cash");
+  const [tipo, setTipo] = useState("+");
+  const [descricao, setDescricao] = useState("");
 
-  function adicionarLancamento (evento: React.FormEvent<HTMLFormElement>) {
-    evento.preventDefault()
-    setLancamento(lancamentos => 
-      [
-        ...lancamentos,
-        {
-          tipo,
-          conta,
-          hora : Date.now()
-          quantia
-        }
-      ]
-      )
+  function lancamentoUpdate(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setLancamentos((atualState) => [
+      ...atualState,
+      {
+        quantia,
+        conta,
+        tipo,
+        descricao,
+        hora: Date.now(),
+      },
+    ]);
   }
 
   return (
-    <form id="lancamentoForm" className={styles.form}>
+    <form
+      id="lancamentoForm"
+      className={styles.form}
+      onSubmit={lancamentoUpdate}
+    >
       <div className={styles.wrapper1}>
         <input
           className={styles.radioButton}
@@ -35,6 +42,7 @@ function Form({setLancamento}: Props) {
           id="entrada"
           value="+"
           required
+          onChange={(event) => setTipo(event.target.value)}
         />
         <label className={styles.radioLabel} htmlFor="entrada">
           Entrada
@@ -46,6 +54,7 @@ function Form({setLancamento}: Props) {
           id="saida"
           value="-"
           required
+          onChange={(event) => setTipo(event.target.value)}
         />
         <label className={styles.radioLabel} htmlFor="saida">
           Saida
@@ -56,6 +65,7 @@ function Form({setLancamento}: Props) {
           name="Conta"
           form="lancamentoForm"
           required
+          onChange={(event) => setConta(event.target.value)}
         >
           <option value="Cash">Cash</option>
           <option value="Cartão">Cartão</option>
@@ -75,8 +85,8 @@ function Form({setLancamento}: Props) {
             decimalSeparator=","
             groupSeparator="."
             decimalsLimit={2}
-            onValueChange={(value, name) => console.log(value, name)}
             required
+            onChange={event => setQuantia(event.target.value)}
           />
         </div>
         <div className={styles.inputWrapper}>
@@ -89,6 +99,7 @@ function Form({setLancamento}: Props) {
             name="descricao"
             id="descricao"
             placeholder="..."
+            onChange={(event) => setDescricao(event.target.value)}
           />
         </div>
         <Button type="submit" buttonColor="#007AFF">

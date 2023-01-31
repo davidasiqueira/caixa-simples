@@ -1,10 +1,15 @@
+import Lancamento from "common/interfaces/lançamentos-interface";
 import Table from "components/table";
 
-function UltimosLancamentos() {
-  return(
+interface Props {
+  lancamento: Lancamento[];
+}
+
+function UltimosLancamentos({ lancamento }: Props) {
+  return (
     <div>
-      <Table />
+      <Table lancamento={lancamento} />
     </div>
-  )
+  );
 }
 export default UltimosLancamentos;

@@ -1,8 +1,9 @@
-interface Tds {
-  quantia : number,
+interface Lancamento {
+  quantia : string
   conta : string
   hora : any
   tipo : string
+  descricao: string
 }
 
-export default Tds
+export default Lancamento
