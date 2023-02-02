@@ -1,10 +1,10 @@
-import Lancamento from "common/interfaces/lançamentos-interface";
+import Lancamento  from "@/common/interfaces/lançamentos-interface";
 import { useState } from "react";
 import styles from "./conteudo.module.scss";
-import Lancamentos from "./lancamentos";
-import UltimosLancamentos from "./ultimosLancamentos";
+import { Lancamentos } from "./lancamentos";
+import { UltimosLancamentos}  from "./ultimosLancamentos";
 
-function Conteudo() {
+export const Conteudo = () => {
   const [lancamentos, setLancamentos] = useState<Lancamento[]>([]);
 
   return (
@@ -21,4 +21,4 @@ function Conteudo() {
   );
 }
 
-export default Conteudo;
+

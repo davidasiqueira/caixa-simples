@@ -1,14 +1,13 @@
 import styles from './nav.module.scss'
-import { ReactComponent as ChartLogo } from "assets/chart.svg"
-import { ReactComponent as StoreLogo } from "assets/store.svg"
+// import  ChartLogo  from "@/assets/chart.svg"
+// import  StoreLogo  from "@/assets/store.svg"
 
 
-function Nav() {
+export const Nav = () => {
   return (
     <div className={styles.nav}>
-      <ChartLogo />
-      <StoreLogo />
+      {/* <ChartLogo />
+      <StoreLogo /> */}
     </div>
   )
 }
-export default Nav

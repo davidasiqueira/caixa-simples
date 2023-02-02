@@ -1,16 +1,15 @@
 import styles from './sidebar.module.scss'
-import {ReactComponent as Logo } from "assets/logo.svg"
-import { ReactComponent as AvatarLogo } from "assets/avatar.svg"
-import Nav from './nav'
+// import  Logo  from "@/assets/logo.svg"
+// import  AvatarLogo  from "@/assets/avatar.svg"
+import { Nav }from './nav'
 
-function Sidebar() {
+export const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
-      <Logo />
+      {/* <Logo /> */}
       <Nav />
-      <AvatarLogo />
+      {/* <AvatarLogo /> */}
     </div>
   )
 }
 
-export default Sidebar

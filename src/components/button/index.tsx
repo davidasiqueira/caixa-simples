@@ -6,7 +6,7 @@ interface Props {
     buttonColor?: string
 }
 
-function Button({children, type , buttonColor} : Props) {
+export const Button = ({children, type , buttonColor} : Props) => {
   const styleBtn = {
     button: {
       backgroundColor : buttonColor
@@ -18,4 +18,3 @@ function Button({children, type , buttonColor} : Props) {
             </button>
   )
 }
-export default Button;

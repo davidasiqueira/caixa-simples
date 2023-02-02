@@ -1,14 +1,14 @@
-import Button from "components/button";
+import {Button }from "@/components/button";
 import styles from "./form.module.scss";
 import CurrencyInput from "react-currency-input-field";
-import Lancamento from "common/interfaces/lançamentos-interface";
+import Lancamento from "@/common/interfaces/lançamentos-interface";
 import { useState } from "react";
 
 interface Props {
   setLancamentos: React.Dispatch<React.SetStateAction<Lancamento[]>>;
 }
 
-function Form({ setLancamentos }: Props) {
+export const Form = ({ setLancamentos }: Props) => {
   const [quantia, setQuantia] = useState('');
   const [conta, setConta] = useState("cash");
   const [tipo, setTipo] = useState("+");
@@ -110,4 +110,4 @@ function Form({ setLancamentos }: Props) {
   );
 }
 
-export default Form;
+

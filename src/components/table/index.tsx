@@ -1,12 +1,12 @@
-import Lancamento from "common/interfaces/lançamentos-interface";
-import Tr from "./tr";
+import Lancamento from "@/common/interfaces/lançamentos-interface";
+import {Tr} from "./tr";
 import styles from "./table.module.scss";
 
 interface Props {
   lancamento: Lancamento[];
 }
 
-function Table({ lancamento }: Props) {
+export const Table = ({ lancamento }: Props) => {
   return (
     <table className={styles.table}>
       <thead>
@@ -24,4 +24,4 @@ function Table({ lancamento }: Props) {
     </table>
   );
 }
-export default Table;
+

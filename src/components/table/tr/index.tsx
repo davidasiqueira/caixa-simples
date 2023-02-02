@@ -1,15 +1,15 @@
-import Lancamento from "common/interfaces/lançamentos-interface";
+import Lancamento from "@/common/interfaces/lançamentos-interface";
 import styles from "./tr.module.scss";
 
 interface Props {
   data: Lancamento;
 }
 
-function Tr({ data }: Props) {
+export const Tr = ({ data }: Props) => {
   return (
     <tr className={data.tipo === "+" ? styles.trGreen : styles.trRed}>
       <td>
-        {data.tipo}R${data.quantia}
+        {data.tipo}{data.quantia}
       </td>
       <div>
         <td>{data.conta}</td>
@@ -18,4 +18,4 @@ function Tr({ data }: Props) {
     </tr>
   );
 }
-export default Tr;
+
