@@ -1,13 +1,11 @@
 import styles from './nav.module.scss'
-// import  ChartLogo  from "@/assets/chart.svg"
-// import  StoreLogo  from "@/assets/store.svg"
-
+import { ChartLogo, StoreLogo } from '@/components/svgs'
 
 export const Nav = () => {
   return (
     <div className={styles.nav}>
-      {/* <ChartLogo />
-      <StoreLogo /> */}
+      <ChartLogo />
+      <StoreLogo /> 
     </div>
   )
 }

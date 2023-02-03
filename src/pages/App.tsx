@@ -1,5 +1,5 @@
 import styles from "@/styles/app.module.scss";
-import { Sidebar }from "../../components/sidebar";
+import { Sidebar }from "../components/sidebar";
 import {Conteudo} from "@/components/conteudo";
 
 export default function App() {
