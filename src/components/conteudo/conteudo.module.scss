@@ -5,13 +5,10 @@
   height: 100%;
 }
 
-.lancamento {
-  
-}
 
 .ultimosLancamento {
   width: 295px;
- 
+  overflow-y: scroll;
 }
 
 .ultimosLancamento, .lancamento{
