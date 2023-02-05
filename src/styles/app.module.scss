@@ -7,3 +7,9 @@
   padding: 40px;
   height: calc(100vh - 80px);
 }
+.accontCardWrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  padding-top: 16px;
+}

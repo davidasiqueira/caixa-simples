@@ -49,17 +49,17 @@ export const InfoCard = ({
   };
 
   return (
-    <div>
+    <div className={styles.componentWrapper}>
       <h4>{accontName}</h4>
-      <div>
+      <div className={styles.contentWrapper}>
         <section>
-          <h5>Média ultimos 30 dias</h5>
-          <p>R$ {mediaUltimos30Dias}</p>
+          <h5 >Média ultimos 30 dias</h5>
+          <p style={{color: cardColor}} className={styles.values}>R$ {mediaUltimos30Dias}</p>
         </section>
         <section>
           <h5>Total Hoje</h5>
-          <p>R$ {totalHoje}</p>
-          <p
+          <p style={{color: cardColor}} className={styles.values}>R$ {totalHoje}</p>
+          <p 
             className={
               fracaoDototal >= 0
                 ? styles.percentualPositivo
