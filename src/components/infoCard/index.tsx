@@ -42,6 +42,7 @@ export const InfoCard = ({
     },
     stroke: {
       curve: "smooth",
+      colors:[cardColor]
     },
     grid: {
       show: false,

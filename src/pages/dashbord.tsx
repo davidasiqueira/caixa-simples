@@ -32,7 +32,7 @@ export default function App() {
             mediaUltimos30Dias={300}
             totalHoje={250}
             accontName="Conta: cash"
-            cardColor="#C361FF"
+            cardColor="#7B61FF"
             infoGrafico={{
               series: [
                 {
@@ -50,7 +50,7 @@ export default function App() {
             mediaUltimos30Dias={200}
             totalHoje={60}
             accontName="Conta: Pix"
-            cardColor="#C361FF"
+            cardColor="#007AFF"
             infoGrafico={{
               series: [
                 {
@@ -68,7 +68,7 @@ export default function App() {
             mediaUltimos30Dias={400}
             totalHoje={300}
             accontName="Conta: Cartão"
-            cardColor="#C361FF"
+            cardColor="#00A62E"
             infoGrafico={{
               series: [
                 {
