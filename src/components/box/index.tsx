@@ -9,7 +9,7 @@ export const Box = ({children, title}:Props) => {
   return (
     <>
       <section className={styles.box}>
-        <h3>Lançamentos</h3>
+        <h3>{title}</h3>
         {children}
       </section>
     </>
