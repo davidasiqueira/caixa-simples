@@ -77,7 +77,7 @@ export const InfoCard = ({
             options={infoGrafico.options}
             series={infoGrafico.series}
             width={"100%"}
-            height={150}
+            height={90}
           />
         </section>
       </div>

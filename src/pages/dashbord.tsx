@@ -2,6 +2,8 @@ import styles from "@/styles/app.module.scss";
 import { Sidebar } from "../components/sidebar";
 import { Box } from "@/components/box";
 import { InfoCard } from "@/components/infoCard";
+import { MainChart } from "@/components/mainChart";
+
 
 export default function App() {
   return (
@@ -82,6 +84,22 @@ export default function App() {
               ],
             }}
           />
+          <MainChart
+          cardColor="#00A62E"
+          infoGrafico={{
+            series: [
+              {
+                name: "teste",
+                data: [
+                  110, 100, 200, 250, 300, 215, 334, 324, 342, 342, 342, 342,
+                  234, 324, 434 , 110, 100, 200, 250, 300, 215, 334, 324, 342, 342, 342, 342,
+                  234, 324, 434
+                ],
+              },
+            ],
+          }}
+          />
+          
           </div>
         </Box>
       </main>
