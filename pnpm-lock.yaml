@@ -4,8 +4,11 @@ specifiers:
   '@babel/core': '>=7.0.0 <8.0.0'
   '@babel/plugin-syntax-flow': ^7.14.5
   '@babel/plugin-transform-react-jsx': ^7.14.9
+  '@headlessui/react': ^1.7.9
+  '@heroicons/react': ^2.0.14
   '@next/font': 13.1.2
   '@svgr/webpack': ^6.5.1
+  '@tailwindcss/forms': ^0.5.3
   '@types/node': 18.11.18
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.10
@@ -15,8 +18,10 @@ specifiers:
   react-apexcharts: ^1.4.0
   react-currency-input-field: ^3.6.9
   react-dom: 18.2.0
+  react-hook-form: ^7.43.0
   react-scripts: 5.0.1
   sass: ^1.57.1
+  tailwindcss: ^3.2.4
   typescript: 4.9.4
   typescript-plugin-css-modules: ^4.1.1
   web-vitals: ^2.1.4
@@ -25,7 +30,10 @@ dependencies:
   '@babel/core': 7.20.12
   '@babel/plugin-syntax-flow': 7.18.6_@babel+core@7.20.12
   '@babel/plugin-transform-react-jsx': 7.20.13_@babel+core@7.20.12
+  '@headlessui/react': 1.7.9_biqbaboplfbrettd7655fr4n2y
+  '@heroicons/react': 2.0.14_react@18.2.0
   '@next/font': 13.1.2
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@types/node': 18.11.18
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.10
@@ -35,8 +43,10 @@ dependencies:
   react-apexcharts: 1.4.0_biej67c4ah34dlf2pfz4joq77a
   react-currency-input-field: 3.6.9_react@18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.43.0_react@18.2.0
   react-scripts: 5.0.1_mr5ytpwpm2xt73grva2dzx22gq
   sass: 1.58.0
+  tailwindcss: 3.2.4
   typescript: 4.9.4
   typescript-plugin-css-modules: 4.1.1_typescript@4.9.4
   web-vitals: 2.1.4
@@ -1493,6 +1503,26 @@ packages:
       - supports-color
     dev: false
 
+  /@headlessui/react/1.7.9_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Bobh/+mDciu8kEE2hvdukFYjbfaG4MEkK/6TjWOgqcODLKYpRhWPKPE+dCcCSz/YrwjFVrEAMOiWtfk6sW20/w==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@heroicons/react/2.0.14_react@18.2.0:
+    resolution: {integrity: sha512-eFL4if6L7woL1fUvk/jjXx4z9NxVESHHrQnEd2qKVelTFTIr/3VLGWdPb0biia9ZVe26P0JSs/xmOlRNur3SrQ==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
     engines: {node: '>=10.10.0'}
@@ -2325,6 +2355,15 @@ packages:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
     dependencies:
       tslib: 2.4.1
+    dev: false
+
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.4:
+    resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.2.4
     dev: false
 
   /@tootallnate/once/1.1.2:
@@ -6929,6 +6968,11 @@ packages:
       webpack: 5.75.0
     dev: false
 
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: false
+
   /minimalistic-assert/1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
     dev: false
@@ -8474,6 +8518,15 @@ packages:
 
   /react-error-overlay/6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
+    dev: false
+
+  /react-hook-form/7.43.0_react@18.2.0:
+    resolution: {integrity: sha512-/rVEz7T0gLdSFwPqutJ1kn2e0sQNyb9ci/hmwEYr2YG0KF/LSuRLvNrf9QWJM+gj88CjDpDW5Bh/1AD7B2+z9Q==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:

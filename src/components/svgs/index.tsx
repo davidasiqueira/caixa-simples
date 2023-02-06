@@ -73,8 +73,13 @@ export const ChartLogo = () => (
   </svg>
 )
 
-export const Logo = () => (
+interface LogoInterface {
+  clas: string
+}
+
+export const Logo = ({clas}:LogoInterface) => (
   <svg
+    className={clas}
     width={49}
     height={34}
     fill="none"
